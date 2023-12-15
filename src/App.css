@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-page {
+    position: relative;
+    overflow-x: auto;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 1rem;
+    overflow-x: auto;
+}
+table {
+    padding: 0.5rem;
+    border: 0.2px solid rgb(240, 240, 240);
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    width: 88%;
+    border-collapse: collapse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+thead {
+    text-transform: capitalize;
+    background-color: #ececec;
+    line-height: 35px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+tr {
+    border-bottom: 0.2px solid rgb(240, 240, 240);
 }
 
-.App-link {
-  color: #61dafb;
+th,
+td {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px 12px;
+    font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th {
+    background-color: rgb(117, 201, 250);
+}
+
+td {
+    background-color: rgb(205, 235, 253);
+}
+
+.name-col {
+    /* width: 200px; */
+    min-width: 200px;
+}
+
+.owner-col {
+    white-space: nowrap;
+    overflow: auto;
+    /* width: 200px; */
+    min-width: 50px;
+}
+
+.url-col {
+    white-space: nowrap;
+    overflow: auto;
+    /* width: 200px; */
+    min-width: 45px;
+}
+
+.description-col {
+    min-width: 200px;
+    font-size: 15px;
+}
+
+.star-col {
+    min-width: 100px;
+    width: 100px;
+}
+
+.pagination-section {
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+    padding: 5px 40px;
+}
+.pagination-section-right {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-left {
+    display: flex;
+    gap: 10px;
+}
+
+img {
+    height: 23px;
 }
