@@ -39,36 +39,38 @@ const RepoGrid = () => {
 
     return (
         <div className="app-container">
-            <div className="pagination-section">
-                <div className="pagination-left">
-                    Page Size:{" "}
-                    <div>
-                        <FormControl fullWidth size="small">
-                            <Select
-                                value={paginationSize}
-                                onChange={(event) =>
-                                    setPaginationSize(event.target.value)
-                                }
-                            >
-                                {paginationPageSizeSelector.map((val) => (
-                                    <MenuItem value={val}> {val}</MenuItem>
-                                ))}
-                            </Select>
-                        </FormControl>
+            <div className="app-header">
+                <div className="pagination-section">
+                    <div className="pagination-left">
+                        Page Size:{" "}
+                        <div>
+                            <FormControl fullWidth size="small">
+                                <Select
+                                    value={paginationSize}
+                                    onChange={(event) =>
+                                        setPaginationSize(event.target.value)
+                                    }
+                                >
+                                    {paginationPageSizeSelector.map((val) => (
+                                        <MenuItem value={val}> {val}</MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                        </div>
                     </div>
-                </div>
-                <div className="pagination-section-right">
-                    <button
-                        onClick={handlePrevious}
-                        disabled={pageNumber === 1}
-                        className="pagination-btn"
-                    >
-                        Previous Page
-                    </button>
-                    <div className="current-page">Page: {pageNumber}</div>
-                    <button onClick={handleNext} className="pagination-btn">
-                        Next Page
-                    </button>
+                    <div className="pagination-section-right">
+                        <button
+                            onClick={handlePrevious}
+                            disabled={pageNumber === 1}
+                            className="pagination-btn"
+                        >
+                            Previous Page
+                        </button>
+                        <div className="current-page">Page: {pageNumber}</div>
+                        <button onClick={handleNext} className="pagination-btn">
+                            Next Page
+                        </button>
+                    </div>
                 </div>
             </div>
             <table>
@@ -76,7 +78,7 @@ const RepoGrid = () => {
                     <tr>
                         <th className="name-col">Name</th>
                         <th className="owner-col">Owner</th>
-                        <th className="description-col">Description</th>
+                        <th className="description-col-head">Description</th>
                         <th className="star-col">Stars_count</th>
                         <th className="url-col">URL</th>
                     </tr>
